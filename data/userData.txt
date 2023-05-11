@@ -1,0 +1,5 @@
+jdoe@mail.com;John;Doe;215121750;Asd12345#;2023-05-02 19:57:55
+jrambo@mail.com;John;Rambo;215121751;Asd54321!;2023-05-02 19:57:55
+jcena@mail.com;John;Cena;215121752;Dsa12345#;2023-05-02 19:57:55
+mblue@mail.com;Micheal;Blue;215121753;Sda12345#;2023-05-02 19:57:55
+sstein@mail.com;Seun;Stein;215121754;Das12345#;2023-05-02 19:57:55
