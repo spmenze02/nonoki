@@ -26,10 +26,18 @@ try {
                     $_SESSION["student_number"] = $rows["student_number"];
                     $_SESSION["reg_date"] = $rows["reg_date"];
                     
-                    $result = $db->query("SELECT * FROM tblAdmin WHERE username = '" . $username . "' AND student_number ='".$student_number."';");
+                    $result = $db->query("SELECT * FROM tblAdmin WHERE username = '" . $username . "';");
                     // Display
                     if (!$result){
+                         if($result[0]['student_number'] === $student_number)
+                         {
                          header('lOCATION: ../index.php');
+                    }else {
+                         echo '<script type="text/javascript">',
+                                   'UserNotFound();',
+                                   '</script>'
+                              ;
+                    }
                     
                     }else {
                          header('lOCATION: ../dashboard_students.php');

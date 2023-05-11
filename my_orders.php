@@ -14,7 +14,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Bootstrap Font Icon CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -31,7 +30,7 @@
 </head>
 
 <body>
-<header>
+    <header>
         <!-- NavBar     -->
         <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
             &nbsp;&nbsp;
@@ -76,56 +75,34 @@
         </nav>
         <!-- End of NavBar -->
     </header>
-    <section>
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center my-4">
-                <div class="col-md-8">
-                    <form action="scripts/add_book.php" method="post">
-                        <div class="form-group">
-                            <label for="title">Book Title</label>
-                            <input type="text" class="form-control" id="title" name="title"
-                                 placeholder="Enter book Title">                            
-                        </div>
-                        <div class="form-group">
-                            <label for="isbn">ISBN Number</label>
-                            <input type="text" class="form-control" id="isbn" name="isbn"
-                                 placeholder="Enter book ISBN Number" required>                            
-                        </div>
 
-                        <div class="form-group">
-                            <label for="edition">Book Edition or Subtitle</label>
-                            <input type="text" class="form-control" id="edition" name="edition"
-                                 placeholder="Enter Book Edition or Subtitle" required>                            
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="author">Book author</label>
-                            <input type="text" class="form-control" id="author" name="author"
-                                 placeholder="Enter author(s)" required>                            
-                        </div>
+    <div class="container mt-5">
 
-                        <div class="form-group">
-                            <label for="year">When was it released</label>
-                            <input type="date" class="form-control" id="year" name="year"
-                                 placeholder="When was the book released" required>                            
-                        </div>
-                        <div class="form-group">
-                            <label for="quantity">How many books are you selling</label>
-                            <input type="number" class="form-control" id="quantity" name="quantity"
-                                 placeholder="How many books are you selling" required  >                            
-                        </div>
 
-                        <div class="form-group">
-                            <label for="quantity">How much are selling the book for</label>
-                            <input type="number" class="form-control" id="price" name="price"
-                                 placeholder="How many books are you selling" required  >                            
-                        </div>
-                        <button type="submit" name="add_book" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        <table class="table table-borderless main table-striped">
+            <thead>
+                <tr class="head bg-danger table-sm text-white">
+                    <th scope="col">Order Number</th>                    
+                    <th scope="col">Order Date</th>
+                    <th scope="col">Amount</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <?PHP
+            require_once('scripts/load_my_order.php');
+        ?>
+            </tbody>
+        </table>
+    </div>
 </body>
+<script src="js/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sweet_alert.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
+    integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
+    data-cf-beacon='{"rayId":"7c008a771d473eab","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}'
+    crossorigin="anonymous"></script>
 
 </html>
